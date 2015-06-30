@@ -3,13 +3,13 @@
 This is a small web scraper using [lxml](http://lxml.de/). It allows
 loading web pages, following links and filling out forms.
 
-# Usage
+## Usage
 
     import web
     from lxml import etree
     import http.client
 
-    http.client.HTTPConnection.debuglevel = 5
+    http.client.HTTPConnection.debuglevel = 1
 
     ua = web.UserAgent()
     response = ua.get('http://www.example.com/login.php')
@@ -24,6 +24,6 @@ loading web pages, following links and filling out forms.
                               "//div[contains(@class, 'foo')]/a/@href")
     doc = ua.parse(response)
 
-# License
+## License
 
 BSD-3
